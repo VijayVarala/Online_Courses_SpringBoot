@@ -4,41 +4,47 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+
 @Entity
 public class Courses {
-	 @Id
-	    @GeneratedValue(strategy = GenerationType.AUTO)
-	    private long id;
-	    private String categories;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private long id;
+    private String categories;
 
-	    // Constructors
-	    public Courses() {
-	    }
+    // Constructors
+    public Courses() {
+    }
 
-	    public Courses(String categories) {
-	        this.categories = categories;
-	    }
+    public Courses(String categories) {
+        this.categories = categories;
+    }
 
-	    // Getters and Setters
-	    public long getId() {
-	        return id;
-	    }
+    public Courses(long id, String categories) {
+        this.id = id;
+        this.categories = categories;
+    }
 
-	    public void setId(long id) {
-	        this.id = id;
-	    }
+    // Getters and Setters
+    public long getId() {
+        return id;
+    }
 
-	    public String getCategories() {
-	        return categories;
-	    }
+    public void setId(long id) {
+        this.id = id;
+    }
 
-	    public void setCategories(String categories) {
-	        this.categories = categories;
-	    }
+    public String getCategories() {
+        return categories;
+    }
 
-	    // toString() method
-	    @Override
-	    public String toString() {
-	        return "Courses [id=" + id + ", categories=" + categories + "]";
-	    }
+    public void setCategories(String categories) {
+        this.categories = categories;
+    }
+
+    // toString() method
+    @Override
+    public String toString() {
+        return "Courses [id=" + id + ", categories=" + categories + "]";
+    }
 }

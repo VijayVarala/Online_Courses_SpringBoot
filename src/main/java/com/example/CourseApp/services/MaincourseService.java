@@ -39,4 +39,9 @@ public class MaincourseService {
     public void deleteCourse(long id) {
         maincourseRepo.deleteById(id);
     }
+    public List<Courses> getCoursesBySelectedSubjects(List<String> selectedSubjects) {
+        // Fetch courses whose categories match any of the selected subjects
+        return maincourseRepo.findByCategoriesIn(selectedSubjects);
+    }
+    
 }

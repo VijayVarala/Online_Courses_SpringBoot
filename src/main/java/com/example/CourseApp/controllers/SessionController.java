@@ -68,5 +68,5 @@ public class SessionController {
 //	        List<Sessions> dayStudySessions = sessionService.getDayStudySessions(currentDate);
 //
 //	        return new ResponseEntity<>(dayStudySessions, HttpStatus.OK);
-//	    }
+//	    }     {not in use of now}
 	}	

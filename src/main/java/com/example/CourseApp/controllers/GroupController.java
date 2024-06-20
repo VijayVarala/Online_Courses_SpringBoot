@@ -19,7 +19,7 @@ import com.example.CourseApp.services.GroupService;
 
 @RestController
 @CrossOrigin(origins = "http://localhost:3000")
-@RequestMapping("/groups")
+@RequestMapping(" ")
 public class GroupController {
 	@Autowired
     private GroupService groupService;
@@ -42,4 +42,5 @@ public class GroupController {
         Groups createdGroup = groupService.createGroup(group);
         return new ResponseEntity<>(createdGroup, HttpStatus.CREATED);
     }
+    
 }

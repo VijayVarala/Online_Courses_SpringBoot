@@ -27,3 +27,4 @@ public class SubcategoryController {
 	        return subcategoryService.getSubcategoriesByCategoryId(categoryId);
 	    }
 	}
+// {not in use as of now}
