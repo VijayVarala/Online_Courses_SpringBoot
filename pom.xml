@@ -25,6 +25,41 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
+<properties>
+    <java.version>17</java.version>
+    <spring-boot.version>2.6.2</spring-boot.version>
+    <junit-jupiter.version>5.8.2</junit-jupiter.version>
+</properties>
+
+<dependencies>
+    <!-- Spring Boot Starter Test -->
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-test</artifactId>
+        <scope>test</scope>
+        <exclusions>
+            <!-- Exclude conflicting JUnit 4 -->
+            <exclusion>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+            </exclusion>
+        </exclusions>
+    </dependency>
+    
+    <!-- Other dependencies -->
+</dependencies>
+
+<build>
+    <plugins>
+        <!-- Maven Surefire Plugin -->
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-surefire-plugin</artifactId>
+            <version>3.1.2</version> <!-- Ensure this version is compatible -->
+        </plugin>
+        <!-- Other plugins -->
+    </plugins>
+</build>
 
     <!-- JUnit 5 -->
     <dependency>
